@@ -1,7 +1,7 @@
 include("class.lua")
 
 --todo: all this can be converted to an entity, to allow collisions?
-CSGBuilder = class()
+CSGBuilder = csg_class()
 
 function CSGBuilder:Rebuild()
 	local shape

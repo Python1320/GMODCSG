@@ -75,7 +75,7 @@ end
 
 -- Holds a binary space partition tree representing a 3D solid. Two solids can
 -- be combined using the `union()`, `subtract()`, and `intersect()` methods.
-CSG = class()
+CSG = csg_class()
 
 function CSG:init()
   self.polygons = {}
@@ -402,7 +402,7 @@ end
 -- functions like `CSG.sphere()` can return a smooth vertex normal, but `normal`
 -- is not used anywhere else.
 
-CSG.Vertex = class()
+CSG.Vertex = csg_class()
 function CSG.Vertex:init(pos, normal)
   self.pos = pos
   self.normal = normal
@@ -436,7 +436,7 @@ end
 
 -- Represents a plane in 3D space.
 
-CSG.Plane = class()
+CSG.Plane = csg_class()
 function CSG.Plane:init(normal, w)
   self.normal = normal
   self.w = w
@@ -568,7 +568,7 @@ end
 -- polygons that are clones of each other or were split from the same polygon.
 -- self.can be used to define per-polygon properties (such as surface color).
 
-CSG.Polygon = class()
+CSG.Polygon = csg_class()
 function CSG.Polygon:init(vertices, shared)
   self.vertices = vertices
   self.shared = shared
@@ -593,7 +593,7 @@ end
 -- the front and/or back subtrees. self.is not a leafy BSP tree since there is
 -- no distinction between internal and leaf nodes.
 
-CSG.Node = class()
+CSG.Node = csg_class()
 function CSG.Node:init(polygons)
   self.plane = nil
   self.front = nil

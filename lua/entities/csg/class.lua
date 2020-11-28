@@ -17,7 +17,7 @@
 -- Class.lua
 -- Compatible with Lua 5.1 (not 5.0).
 
-function class(base)
+function csg_class(base)
     local c = {}    -- a new class instance
     if type(base) == 'table' then
         -- our new class is a shallow copy of the base class!

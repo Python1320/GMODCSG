@@ -1,3 +1,6 @@
+AddCSLuaFile("csg.lua")  
+AddCSLuaFile("class.lua")  
+AddCSLuaFile("csgbuilder.lua")  
 AddCSLuaFile("cl_init.lua")  
 AddCSLuaFile("shared.lua")  
 
